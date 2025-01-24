@@ -1377,6 +1377,11 @@
   resolved "https://registry.npmjs.org/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
   integrity sha512-7NQmHra/JILCd1QqpSzl8+mJRc8ZHz3uDm8YV1Ks9IhK0epEiTw8aIErbvH9PI+6XbqhyIQy3462nEsn7UVzjQ==
 
+"@uiw/watermark.js@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@uiw/watermark.js/-/watermark.js-1.0.1.tgz#8815ef7c74692ea6a1aafd697756ade84206d1e9"
+  integrity sha512-ymn0LPfp9f4UhMIFonSEHtRnuF32OCLieQs3dQu0gJpXXqz4bnAdMU4Gx+qLr2oWdS6l3IMrDQLEYAhDytxLuA==
+
 "@vitejs/plugin-react@^1.0.7":
   version "1.3.2"
   resolved "https://registry.npmjs.org/@vitejs/plugin-react/-/plugin-react-1.3.2.tgz#2fcf0b6ce9bcdcd4cec5c760c199779d5657ece1"
