@@ -1,4 +1,6 @@
-import express, { Application } from "express";
+import axios from "axios";
+import express, { Application, Request, Response } from "express";
+import apiRoute from './routes/apiRoute'
 
 const app: Application = express();
 const port = 3001;
@@ -6,7 +8,8 @@ const port = 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => res.send("LINE MAN Wongnai Frontend Assignment"));
+// routes
+app.use('/api', apiRoute)
 
 try {
 	app.listen(port, (): void => {
