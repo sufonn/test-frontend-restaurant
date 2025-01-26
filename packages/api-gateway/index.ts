@@ -1,9 +1,13 @@
 import axios from "axios";
-import express, { Application, Request, Response } from "express";
+const cors = require('cors');
+import express, { Application } from "express";
 import apiRoute from './routes/apiRoute'
 
 const app: Application = express();
 const port = 3001;
+
+// Enable CORS for origin 'http://localhost:3000' route
+app.use(cors({ origin: 'http://localhost:3000' }));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
