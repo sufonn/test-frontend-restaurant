@@ -1,0 +1,37 @@
+@use './_variables' as variables
+
+.restaurant
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    padding: 5rem 10rem
+    display: grid
+    gap: 2rem
+    grid-template-columns: repeat(4, minmax(0, 1fr))
+
+    @media screen and (max-width: variables.$sm)
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    @media screen and (max-width: variables.$md)
+    @media screen and (max-width: variables.$lg)
+
+    .restaurant-card
+        border-radius: 24px
+        padding: 16px
+        background: variables.$white
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 0.5rem
+        &:hover,
+        &:focus
+            cursor: pointer
+            box-shadow: 1px 3px 0 rgba(5, 108, 87, 0.1), 0 1px 2px 0 rgba(5, 108, 87, 0.1)
+
+        .restaurant-title
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+
+            h2
+                flex-basis: 75%
