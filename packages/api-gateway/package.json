@@ -4,7 +4,8 @@
 	"main": "index.ts",
 	"scripts": {
 		"dev": "ts-node-dev --respawn --transpile-only index.ts",
-		"build": "tsc"
+		"build": "tsc",
+		"test": "yarn playwright test --project=API Tests"
 	},
 	"devDependencies": {
 		"@types/express": "^4.17.11",

@@ -2,6 +2,7 @@
 	"name": "root",
 	"private": true,
 	"devDependencies": {
+		"@playwright/test": "^1.50.0",
 		"lerna": "^4.0.0"
 	},
 	"workspaces": {

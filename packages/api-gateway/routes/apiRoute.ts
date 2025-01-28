@@ -16,7 +16,7 @@ router.get('/restaurant', async (req: Request, res:Response) => {
 	const restIds = [567051, 227018];
 	
 	try {
-		const responses = await Promise.all(
+		const responses: RestaurantDataProps[] = await Promise.all(
 			restIds.map(async (id) => {
 			  const apiUrl = `${baseUrl}/${id}.json`;
 			  const response = await axios.get(apiUrl);
@@ -26,6 +26,22 @@ router.get('/restaurant', async (req: Request, res:Response) => {
 		  );
 		
 		res.status(200).json(responses)
+	} catch (error) {
+		console.error('Error fetching restaurant data: ', error)
+		res.status(500).json({error: 'Failted to fetch restaurant data'})
+	}
+})
+
+router.get('/restaurant/:restaurantId', async (req: Request, res:Response) => {
+    // - 567051 (ร้านลืมเคี้ยว)
+    // - 227018 (Ekkamai Macchiato - Home Brewer)
+
+	const {restaurantId} = req.params
+	const apiUrl = `${baseUrl}/${restaurantId}.json`;
+	try {
+		const response:RestaurantDataProps = await axios.get(apiUrl)
+		
+		res.status(200).json(response)
 	} catch (error) {
 		console.error('Error fetching restaurant data: ', error)
 		res.status(500).json({error: 'Failted to fetch restaurant data'})
